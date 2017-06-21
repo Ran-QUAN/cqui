@@ -48,7 +48,7 @@ INSERT OR REPLACE INTO CQUI_Settings -- Don't touch this line!
       ("CQUI_Smartbanner_Population", 1), -- Shows turns to city population growth in the banner
       ("CQUI_Smartbanner_Cultural", 1), -- Shows turns to city cultural growth in the banner
       ("CQUI_SmartWorkIcon", 1), -- Applies a different size/transparency to citizen icons if they're currently being worked
-      ("CQUI_TechPopupVisual", 0), -- Popups will be displayed when you discover a new tech or civic (this is the normal behavior for the unmoded game)
+      ("CQUI_TechPopupVisual", 1), -- Popups will be displayed when you discover a new tech or civic (this is the normal behavior for the unmoded game)
       ("CQUI_TechPopupAudio", 1), -- Play the voiceovers when you discover a new tech or civic (this is the normal behavior for the unmoded game)
       ("CQUI_ToggleYieldsOnLoad", 1); -- Toggles yields immediately on load
 
@@ -78,11 +78,11 @@ INSERT OR REPLACE INTO CQUI_Settings -- Don't touch this line!
 
 INSERT OR REPLACE INTO CQUI_Settings -- Don't touch this line!
   VALUES  ("CQUI_MinimapSize", 512), -- Factor used for setting minimap size (ex: 512 = 512x256). Recommended values fall between 224 and 768, though any positive could work
-  ("CQUI_ProductionItemHeight", 32), -- Height used for individual items in the production queue. Recommended values fall between 24 and 128, though any positive could work
-  ("CQUI_SmartWorkIconSize", 80), -- Size used for "smart" work icons. This size is applied to work icons that are currently locked if the smart work icon option is enabled. Recommended values fall between 48 and 128, though any positive multiple of 8 could work (non-multiples are rounded down)
-  ("CQUI_SmartWorkIconAlpha", 40), -- Transparency percent used for "smart" work icons. This alpha is applied to work icons that are currently locked if the smart work icon option is enabled. Recommended values fall between 10 and 100, though any value between 0 and 100 could work
-  ("CQUI_WorkIconSize", 56), -- Size used for work icons. Applies to all icons that aren't flagged using the "smart" work icon feature. Recommended values fall between 48 and 128, though any positive multiple of 8 could work (non-multiples are rounded down)
-  ("CQUI_WorkIconAlpha", 75); -- Size used for work icons. Applies to all icons that aren't flagged using the "smart" work icon feature. Recommended values fall between 10 and 100, though any value between 0 and 100 could work
+  ("CQUI_ProductionItemHeight", 36), -- Height used for individual items in the production queue. Recommended values fall between 24 and 128, though any positive could work
+  ("CQUI_SmartWorkIconSize", 64), -- Size used for "smart" work icons. This size is applied to work icons that are currently locked if the smart work icon option is enabled. Recommended values fall between 48 and 128, though any positive multiple of 8 could work (non-multiples are rounded down)
+  ("CQUI_SmartWorkIconAlpha", 60), -- Transparency percent used for "smart" work icons. This alpha is applied to work icons that are currently locked if the smart work icon option is enabled. Recommended values fall between 10 and 100, though any value between 0 and 100 could work
+  ("CQUI_WorkIconSize", 64), -- Size used for work icons. Applies to all icons that aren't flagged using the "smart" work icon feature. Recommended values fall between 48 and 128, though any positive multiple of 8 could work (non-multiples are rounded down)
+  ("CQUI_WorkIconAlpha", 80); -- Size used for work icons. Applies to all icons that aren't flagged using the "smart" work icon feature. Recommended values fall between 10 and 100, though any value between 0 and 100 could work
 
 /*
     ┌────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -96,50 +96,50 @@ INSERT OR REPLACE INTO CQUI_Settings -- Don't touch this line!
 INSERT OR REPLACE INTO CQUI_Settings -- Don't touch this line!
   VALUES  ("CQUI_TrimGossip", 1), --Trims the source from the start of gossip messages
     --Values controlling individual gossip messages
-    ("CQUI_LOC_GOSSIP_AGENDA_KUDOS", 0),
+    ("CQUI_LOC_GOSSIP_AGENDA_KUDOS", 1),
     ("CQUI_LOC_GOSSIP_AGENDA_WARNING", 1),
     ("CQUI_LOC_GOSSIP_ALLIED", 1),
     ("CQUI_LOC_GOSSIP_ANARCHY_BEGINS", 1),
-    ("CQUI_LOC_GOSSIP_ARTIFACT_EXTRACTED", 0),
+    ("CQUI_LOC_GOSSIP_ARTIFACT_EXTRACTED", 1),
     ("CQUI_LOC_GOSSIP_BARBARIAN_INVASION_STARTED", 1),
     ("CQUI_LOC_GOSSIP_BARBARIAN_RAID_STARTED", 1),
-    ("CQUI_LOC_GOSSIP_BEACH_RESORT_CREATED", 0),
+    ("CQUI_LOC_GOSSIP_BEACH_RESORT_CREATED", 1),
     ("CQUI_LOC_GOSSIP_CHANGE_GOVERNMENT", 1),
     ("CQUI_LOC_GOSSIP_CITY_BESIEGED", 1),
     ("CQUI_LOC_GOSSIP_CITY_LIBERATED", 1),
     ("CQUI_LOC_GOSSIP_CITY_RAZED", 1),
-    ("CQUI_LOC_GOSSIP_CLEAR_CAMP", 0),
+    ("CQUI_LOC_GOSSIP_CLEAR_CAMP", 1),
     ("CQUI_LOC_GOSSIP_CITY_STATE_INFLUENCE", 1),
     ("CQUI_LOC_GOSSIP_CONQUER_CITY", 1),
     ("CQUI_LOC_GOSSIP_CONSTRUCT_DISTRICT", 1),
     ("CQUI_LOC_GOSSIP_CREATE_PANTHEON", 1),
     ("CQUI_LOC_GOSSIP_CULTURVATE_CIVIC", 1), --Civic researched
     ("CQUI_LOC_GOSSIP_DECLARED_FRIENDSHIP", 1),
-    ("CQUI_LOC_GOSSIP_DELEGATION", 0),
+    ("CQUI_LOC_GOSSIP_DELEGATION", 1),
     ("CQUI_LOC_GOSSIP_DENOUNCED", 1),
-    ("CQUI_LOC_GOSSIP_EMBASSY", 0),
+    ("CQUI_LOC_GOSSIP_EMBASSY", 1),
     ("CQUI_LOC_GOSSIP_ERA_CHANGED", 1),
-    ("CQUI_LOC_GOSSIP_FIND_NATURAL_WONDER", 0),
+    ("CQUI_LOC_GOSSIP_FIND_NATURAL_WONDER", 1),
     ("CQUI_LOC_GOSSIP_FOUND_CITY", 1),
     ("CQUI_LOC_GOSSIP_FOUND_RELIGION", 1),
     ("CQUI_LOC_GOSSIP_GREATPERSON_CREATED", 1),
     ("CQUI_LOC_GOSSIP_LAUNCHING_ATTACK", 1),
     ("CQUI_LOC_GOSSIP_WAR_PREPARATION", 1),
-    ("CQUI_LOC_GOSSIP_INQUISITION_LAUNCHED", 0),
-    ("CQUI_LOC_GOSSIP_LAND_UNIT_LEVEL", 0),
+    ("CQUI_LOC_GOSSIP_INQUISITION_LAUNCHED", 1),
+    ("CQUI_LOC_GOSSIP_LAND_UNIT_LEVEL", 1),
     ("CQUI_LOC_GOSSIP_MAKE_DOW", 1),
-    ("CQUI_LOC_GOSSIP_NATIONAL_PARK_CREATED", 0),
+    ("CQUI_LOC_GOSSIP_NATIONAL_PARK_CREATED", 1),
     ("CQUI_LOC_GOSSIP_NEW_RELIGIOUS_MAJORITY", 1),
-    ("CQUI_LOC_GOSSIP_PILLAGE", 0),
+    ("CQUI_LOC_GOSSIP_PILLAGE", 1),
     ("CQUI_LOC_GOSSIP_POLICY_ENACTED", 1),
     ("CQUI_LOC_GOSSIP_RECEIVE_DOW", 1),
-    ("CQUI_LOC_GOSSIP_RELIC_RECEIVED", 0),
-    ("CQUI_LOC_GOSSIP_RESEARCH_AGREEMENT", 0),
+    ("CQUI_LOC_GOSSIP_RELIC_RECEIVED", 1),
+    ("CQUI_LOC_GOSSIP_RESEARCH_AGREEMENT", 1),
     ("CQUI_LOC_GOSSIP_RESEARCH_TECH", 1),
     ("CQUI_LOC_GOSSIP_SPY_DISRUPT_ROCKETRY_DETECTED", 1),
     ("CQUI_LOC_GOSSIP_SPY_DISRUPT_ROCKETRY_UNDETECTED", 1),
-    ("CQUI_LOC_GOSSIP_SPY_GREAT_WORK_HEIST_DETECTED", 0),
-    ("CQUI_LOC_GOSSIP_SPY_GREAT_WORK_HEIST_UNDETECTED", 0),
+    ("CQUI_LOC_GOSSIP_SPY_GREAT_WORK_HEIST_DETECTED", 1),
+    ("CQUI_LOC_GOSSIP_SPY_GREAT_WORK_HEIST_UNDETECTED", 1),
     ("CQUI_LOC_GOSSIP_SPY_RECRUIT_PARTISANS_DETECTED", 1),
     ("CQUI_LOC_GOSSIP_SPY_RECRUIT_PARTISANS_UNDETECTED", 1),
     ("CQUI_LOC_GOSSIP_SPY_SABOTAGE_PRODUCTION_DETECTED", 1),
@@ -148,12 +148,12 @@ INSERT OR REPLACE INTO CQUI_Settings -- Don't touch this line!
     ("CQUI_LOC_GOSSIP_SPY_SIPHON_FUNDS_UNDETECTED", 1),
     ("CQUI_LOC_GOSSIP_SPY_STEAL_TECH_BOOST_DETECTED", 1),
     ("CQUI_LOC_GOSSIP_SPY_STEAL_TECH_BOOST_UNDETECTED", 1),
-    ("CQUI_LOC_GOSSIP_TRADE_DEAL", 0),
-    ("CQUI_LOC_GOSSIP_TRADE_RENEGE", 0),
+    ("CQUI_LOC_GOSSIP_TRADE_DEAL", 1),
+    ("CQUI_LOC_GOSSIP_TRADE_RENEGE", 1),
     ("CQUI_LOC_GOSSIP_TRAIN_SETTLER", 1),
     ("CQUI_LOC_GOSSIP_TRAIN_UNIT", 1),
     ("CQUI_LOC_GOSSIP_TRAIN_UNIQUE_UNIT", 1),
-    ("CQUI_LOC_GOSSIP_PROJECT_STARTED", 0),
+    ("CQUI_LOC_GOSSIP_PROJECT_STARTED", 1),
     ("CQUI_LOC_GOSSIP_START_VICTORY_STRATEGY", 1),
     ("CQUI_LOC_GOSSIP_STOP_VICTORY_STRATEGY", 1),
     ("CQUI_LOC_GOSSIP_WMD_BUILT", 1),
